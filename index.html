@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phelix Kraft — Kraft på Oppdrag</title>
+  <meta name="description" content="Phelix Kraft — sparring, perspektiv og gjennomføring. En ekstra hjerne i rommet når du trenger nye perspektiver eller noen som får ting gjort." />
+  <style>
+    :root{
+      --bg:#fbfafc;
+      --ink:#1c1820;
+      --muted:#6d6672;
+      --purple:#6f3cc3;
+      --purple-dark:#4f2597;
+      --green:#183f34;
+      --card:#ffffff;
+      --line:#e9e3ee;
+      --soft:#f2edf7;
+      --max:1120px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(50, 30, 72, .08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    nav{
+      position:sticky;top:0;z-index:30;
+      background:rgba(251,250,252,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(233,227,238,.8);
+    }
+    .nav-inner{
+      min-height:74px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .brand strong{font-size:1.25rem;color:var(--purple-dark)}
+    .brand span{font-size:.82rem;color:var(--muted);font-weight:700}
+    .nav-links{display:flex;gap:18px;align-items:center;font-size:.95rem;color:var(--muted)}
+    .nav-links a:hover{color:var(--ink)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:999px;
+      background:var(--purple);color:#fff;font-weight:800;
+      border:1px solid var(--purple);
+      transition:.18s ease;
+    }
+    .btn:hover{transform:translateY(-1px);background:var(--purple-dark)}
+    .btn.ghost{background:transparent;color:var(--purple-dark)}
+    .btn.ghost:hover{background:var(--soft)}
+    header{
+      padding:94px 0 72px;
+      overflow:hidden;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:54px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--green);margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(3rem,7vw,6.3rem);
+      line-height:.92;letter-spacing:-.06em;
+      margin:0 0 24px;
+      max-width:850px;
+    }
+    h1 .accent{color:var(--purple)}
+    .lead{
+      font-size:clamp(1.16rem,2vw,1.5rem);
+      color:var(--muted);max-width:760px;margin:0 0 32px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{
+      min-height:390px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.24), transparent 28%),
+        linear-gradient(145deg, var(--purple-dark), #7b46c8 52%, var(--green));
+      color:white;
+      box-shadow:var(--shadow);
+      padding:34px;
+      display:flex;flex-direction:column;justify-content:space-between;
+      transform:rotate(1.3deg);
+    }
+    .hero-card .quote{
+      font-size:clamp(1.7rem,3vw,2.8rem);
+      line-height:1.05;letter-spacing:-.04em;font-weight:850;
+    }
+    .hero-card .small{opacity:.8;font-weight:700}
+    section{padding:78px 0}
+    .section-kicker{
+      color:var(--purple-dark);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin-bottom:12px
+    }
+    h2{
+      font-size:clamp(2rem,4vw,3.6rem);
+      line-height:1.02;letter-spacing:-.04em;margin:0 0 18px;
+    }
+    .section-intro{max-width:760px;color:var(--muted);font-size:1.08rem;margin-bottom:32px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 8px 30px rgba(50,30,72,.035);
+    }
+    .card .num{font-size:.78rem;font-weight:900;color:var(--purple);letter-spacing:.1em}
+    .card h3{font-size:1.25rem;margin:16px 0 10px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted)}
+    .card .price{margin-top:18px;font-weight:850;color:var(--ink)}
+    .split{
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;
+    }
+    .statement{
+      background:var(--green);color:white;border-radius:30px;padding:36px;
+      display:flex;flex-direction:column;justify-content:space-between;
+      min-height:340px;
+    }
+    .statement p{font-size:clamp(1.6rem,3vw,2.7rem);line-height:1.08;letter-spacing:-.03em;font-weight:800;margin:0}
+    .statement small{opacity:.72;font-weight:700}
+    .about{
+      background:var(--soft);border-radius:30px;padding:36px;
+    }
+    .about p{color:#514a57;font-size:1.08rem}
+    .principles{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+    }
+    .principle{
+      border-top:1px solid var(--line);padding-top:18px;
+    }
+    .principle strong{display:block;margin-bottom:5px}
+    .contact{
+      background:#17131a;color:white;border-radius:34px;padding:42px;
+      display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;
+    }
+    .contact p{color:#cfc8d2;max-width:650px}
+    .contact .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact .contact-links a{color:white;font-weight:800;border-bottom:1px solid rgba(255,255,255,.22)}
+    footer{padding:34px 0 46px;color:var(--muted);font-size:.9rem}
+    @media (max-width:900px){
+      .hero,.split,.contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .hero-card{min-height:300px}
+      .nav-links a:not(.btn){display:none}
+    }
+    @media (max-width:620px){
+      header{padding-top:64px}
+      .grid,.principles{grid-template-columns:1fr}
+      .wrap{padding:0 18px}
+      .card,.about,.statement,.contact{padding:24px}
+      .brand span{display:none}
+      .nav-links{gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Phelix Kraft">
+        <strong>PHELIX KRAFT</strong>
+        <span>Kraft på Oppdrag</span>
+      </a>
+      <div class="nav-links">
+        <a href="#tjenester">Tjenester</a>
+        <a href="#om">Om</a>
+        <a class="btn" href="#kontakt">Ta kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Perspektiv · Sparring · Gjennomføring</div>
+        <h1>Gi meg <span class="accent">problemet.</span></h1>
+        <p class="lead">
+          Jeg kommer inn når du trenger et nytt perspektiv, en ekstra hjerne i rommet
+          eller noen som faktisk får ting gjort.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#kontakt">Har du en problemstilling?</a>
+          <a class="btn ghost" href="#tjenester">Se hva jeg tilbyr</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Kjernebudskap">
+        <div class="small">PHELIX / KRAFT PÅ OPPDRAG</div>
+        <div class="quote">Jeg trenger ikke være eksperten i rommet. Jeg skal gjøre rommet bedre.</div>
+        <div class="small">Sparring · Mennesker · Idéer · Gjennomføring</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="tjenester">
+      <div class="wrap">
+        <div class="section-kicker">Tjenester</div>
+        <h2>Fire måter å bruke hodet mitt på.</h2>
+        <p class="section-intro">
+          Du trenger ikke vite nøyaktig hvilken tjeneste du trenger. Fortell meg hva du prøver å løse,
+          så finner vi riktig form.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="num">01</div>
+            <h3>Sparring</h3>
+            <p>Én konkret problemstilling. Nye perspektiver, spørsmål, idéutvikling og ærlig motstand.</p>
+            <div class="price">Fra 2 500 kr</div>
+          </article>
+
+          <article class="card">
+            <div class="num">02</div>
+            <h3>I rommet</h3>
+            <p>Jeg deltar i kreative eller strategiske møter som ekstern sparringspartner og ekstra hjerne.</p>
+            <div class="price">Fra 4 500 kr</div>
+          </article>
+
+          <article class="card">
+            <div class="num">03</div>
+            <h3>Grubleoppdrag</h3>
+            <p>Gi meg problemet. Jeg setter meg inn i det, lar det jobbe og kommer tilbake med det jeg ser.</p>
+            <div class="price">Fra 5 000 kr</div>
+          </article>
+
+          <article class="card">
+            <div class="num">04</div>
+            <h3>På oppdrag</h3>
+            <p>Event, host, fasilitering, mennesker, problemløsning og praktisk gjennomføring.</p>
+            <div class="price">Fra 6 000 kr</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="om">
+      <div class="wrap split">
+        <div class="statement">
+          <p>«Jeg kommer ikke inn for å ha alle svarene. Jeg kommer inn for å finne spørsmålene som flytter dere videre.»</p>
+          <small>— Phelix Kraft</small>
+        </div>
+
+        <div class="about">
+          <div class="section-kicker">Om meg</div>
+          <h2>Jeg trives best når problemet ikke kommer med fasit.</h2>
+          <p>
+            Bakgrunnen min spenner over undervisning, coaching, events, mennesker, problemløsning og praktisk arbeid.
+            Fellesnevneren er enkel: Jeg lærer fort, leser situasjoner, stiller spørsmål og gjør meg nyttig.
+          </p>
+          <p>
+            Noen ganger betyr det å være den ekstra stemmen i et møte. Andre ganger betyr det å stå midt i gjennomføringen
+            og sørge for at mennesker, energi og detaljer faktisk fungerer.
+          </p>
+
+          <div class="principles">
+            <div class="principle">
+              <strong>Se annerledes</strong>
+              <span>Nye perspektiver før nye løsninger.</span>
+            </div>
+            <div class="principle">
+              <strong>Gjør andre bedre</strong>
+              <span>Jeg vil løfte rommet, ikke eie scenen.</span>
+            </div>
+            <div class="principle">
+              <strong>Fra tanke til handling</strong>
+              <span>Jeg liker idéer. Jeg liker enda bedre når de faktisk skjer.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">Hvordan jeg jobber</div>
+        <h2>Ikke et standard konsulentprodukt.</h2>
+        <p class="section-intro">
+          Førstepraten handler om å forstå problemet. Deretter avtaler vi form, omfang og pris.
+          Sparring kan være én time. Et oppdrag kan være én dag. Noen problemer trenger mer tid.
+        </p>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="contact">
+          <div>
+            <div class="section-kicker" style="color:#c7b2ef">Kontakt</div>
+            <h2>Har du en problemstilling?</h2>
+            <p>
+              Fortell meg hva du prøver å løse. Hvis jeg tror jeg kan bidra, finner vi en enkel måte å teste det på.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="https://instagram.com/kraftpaoppdrag" target="_blank" rel="noopener">Instagram: @Kraftpaoppdrag</a>
+            <span>LinkedIn: Phelix Kraft</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Phelix Kraft · Kraft på Oppdrag
+    </div>
+  </footer>
+</body>
+</html>
