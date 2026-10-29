@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phelix Kraft — Kraft på Oppdrag</title>
-  <meta name="description" content="Phelix Kraft — sparring, perspektiv og gjennomføring. En ekstra hjerne i rommet når du trenger nye perspektiver eller noen som får ting gjort." />
+  <title>Phelix Kraft — Vert og sosial igangsetter</title>
+  <meta name="description" content="Phelix Kraft er vert og sosial igangsetter på julebord, firmafester og arrangementer i Oslo. Folk blir kjent på tvers, og ingen blir stående utenfor." />
   <style>
     :root{
       --bg:#fbfafc;
@@ -109,7 +109,7 @@
     .section-intro{max-width:760px;color:var(--muted);font-size:1.08rem;margin-bottom:32px}
     .grid{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:16px;
     }
     .card{
@@ -151,10 +151,13 @@
     .contact p{color:#cfc8d2;max-width:650px}
     .contact .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
     .contact .contact-links a{color:white;font-weight:800;border-bottom:1px solid rgba(255,255,255,.22)}
+    .note{margin-top:22px;color:var(--muted);font-size:1.02rem}
+    .note a{color:var(--purple-dark);font-weight:800;border-bottom:1px solid var(--line)}
+    .about.full{max-width:none}
     footer{padding:34px 0 46px;color:var(--muted);font-size:.9rem}
     @media (max-width:900px){
       .hero,.split,.contact{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
+      .grid{grid-template-columns:1fr}
       .hero-card{min-height:300px}
       .nav-links a:not(.btn){display:none}
     }
@@ -173,12 +176,12 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Phelix Kraft">
         <strong>PHELIX KRAFT</strong>
-        <span>Kraft på Oppdrag</span>
       </a>
       <div class="nav-links">
         <a href="#tjenester">Tjenester</a>
+        <a href="#kvelden">Slik jobber jeg</a>
         <a href="#om">Om</a>
-        <a class="btn" href="#kontakt">Ta kontakt</a>
+        <a class="btn" href="#kontakt">Book en prat</a>
       </div>
     </div>
   </nav>
@@ -186,21 +189,21 @@
   <header id="top">
     <div class="wrap hero">
       <div>
-        <div class="eyebrow">Perspektiv · Sparring · Gjennomføring</div>
-        <h1>Gi meg <span class="accent">problemet.</span></h1>
+        <div class="eyebrow">Vert · Sosial igangsetter · Gjennomføring</div>
+        <h1>Jeg får folk til å <span class="accent">snakke sammen.</span></h1>
         <p class="lead">
-          Jeg kommer inn når du trenger et nytt perspektiv, en ekstra hjerne i rommet
-          eller noen som faktisk får ting gjort.
+          Jeg er sosial igangsetter på julebord, firmafester og arrangementer.
+          Jeg sørger for at folk blir kjent på tvers, og at ingen blir stående utenfor.
         </p>
         <div class="hero-actions">
-          <a class="btn" href="#kontakt">Har du en problemstilling?</a>
-          <a class="btn ghost" href="#tjenester">Se hva jeg tilbyr</a>
+          <a class="btn" href="#kontakt">Book en prat</a>
+          <a class="btn ghost" href="#tjenester">Se hva jeg gjør</a>
         </div>
       </div>
       <div class="hero-card" aria-label="Kjernebudskap">
-        <div class="small">PHELIX / KRAFT PÅ OPPDRAG</div>
+        <div class="small">PHELIX KRAFT</div>
         <div class="quote">Jeg trenger ikke være eksperten i rommet. Jeg skal gjøre rommet bedre.</div>
-        <div class="small">Sparring · Mennesker · Idéer · Gjennomføring</div>
+        <div class="small">Vert · Mennesker · Gjennomføring</div>
       </div>
     </div>
   </header>
@@ -209,70 +212,92 @@
     <section id="tjenester">
       <div class="wrap">
         <div class="section-kicker">Tjenester</div>
-        <h2>Fire måter å bruke hodet mitt på.</h2>
+        <h2>Slik kan du bruke meg.</h2>
         <p class="section-intro">
-          Du trenger ikke vite nøyaktig hvilken tjeneste du trenger. Fortell meg hva du prøver å løse,
-          så finner vi riktig form.
+          Fortell meg om arrangementet og menneskene som kommer, så finner vi riktig opplegg.
         </p>
 
         <div class="grid">
           <article class="card">
             <div class="num">01</div>
-            <h3>Sparring</h3>
-            <p>Én konkret problemstilling. Nye perspektiver, spørsmål, idéutvikling og ærlig motstand.</p>
-            <div class="price">Fra 2 500 kr</div>
-          </article>
-
-          <article class="card">
-            <div class="num">02</div>
-            <h3>I rommet</h3>
-            <p>Jeg deltar i kreative eller strategiske møter som ekstern sparringspartner og ekstra hjerne.</p>
-            <div class="price">Fra 4 500 kr</div>
-          </article>
-
-          <article class="card">
-            <div class="num">03</div>
-            <h3>Grubleoppdrag</h3>
-            <p>Gi meg problemet. Jeg setter meg inn i det, lar det jobbe og kommer tilbake med det jeg ser.</p>
+            <h3>Sosial igangsetter</h3>
+            <p>Til stede hele kvelden på julebord, firmafester og konferanser. Jeg tar imot de som kommer alene, setter i gang samtaler og blander avdelingene.</p>
             <div class="price">Fra 5 000 kr</div>
           </article>
 
           <article class="card">
-            <div class="num">04</div>
-            <h3>På oppdrag</h3>
-            <p>Event, host, fasilitering, mennesker, problemløsning og praktisk gjennomføring.</p>
-            <div class="price">Fra 6 000 kr</div>
+            <div class="num">02</div>
+            <h3>Vert med sosialt opplegg</h3>
+            <p>Som over, pluss isbrytere og aktiviteter vi planlegger sammen, tilpasset menneskene som kommer.</p>
+            <div class="price">Fra 10 000 kr</div>
           </article>
+
+          <article class="card">
+            <div class="num">03</div>
+            <h3>Teamleder på arrangement</h3>
+            <p>Ansvar for vertskap og et lite team over flere dager, for eksempel på messer, turneringer eller lounger.</p>
+            <div class="price">Dagsats fra 5 000 kr</div>
+          </article>
+        </div>
+
+        <p class="note">Trenger du heller en ekstra hjerne på et problem? Jeg tar også sparringsoppdrag. <a href="#kontakt">Spør meg.</a></p>
+      </div>
+    </section>
+
+    <section id="kvelden">
+      <div class="wrap split">
+        <div class="statement">
+          <p>«Målet er at folk blir kjent med hverandre, ikke med meg.»</p>
+          <small>— Phelix Kraft</small>
+        </div>
+
+        <div class="about">
+          <div class="section-kicker">Slik ser en kveld ut</div>
+          <h2>Du merker meg nesten ikke. Det er poenget.</h2>
+          <p>
+            Ingen navneskilt, ingen mikrofon. Jeg mingler som en av gjestene og snakker med alle,
+            ikke bare de som står alene. Ingen skal føle at de blir tatt hånd om.
+          </p>
+
+          <div class="principles">
+            <div class="principle">
+              <strong>Minglingen</strong>
+              <span>Jeg tar imot de som kommer alene og kobler dem med andre.</span>
+            </div>
+            <div class="principle">
+              <strong>Ved bordene</strong>
+              <span>Enkle samtalestartere, så folk snakker med flere enn de kjenner fra før.</span>
+            </div>
+            <div class="principle">
+              <strong>Utover kvelden</strong>
+              <span>Jeg følger med på hvem som blir stående utenfor, og trekker dem inn.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="om">
-      <div class="wrap split">
-        <div class="statement">
-          <p>«Jeg kommer ikke inn for å ha alle svarene. Jeg kommer inn for å finne spørsmålene som flytter dere videre.»</p>
-          <small>— Phelix Kraft</small>
-        </div>
-
-        <div class="about">
+      <div class="wrap">
+        <div class="about full">
           <div class="section-kicker">Om meg</div>
-          <h2>Jeg trives best når problemet ikke kommer med fasit.</h2>
+          <h2>Jeg ser hvem som står utenfor, og jeg vet hvordan jeg får dem inn.</h2>
           <p>
-            Bakgrunnen min spenner over undervisning, coaching, events, mennesker, problemløsning og praktisk arbeid.
-            Fellesnevneren er enkel: Jeg lærer fort, leser situasjoner, stiller spørsmål og gjør meg nyttig.
+            Jeg har bakgrunn som lærer, og fra event, festivaler, uteliv og turneringer. Jeg har arrangert
+            temafester, konkurranser og sosiale aktiviteter, og i mars 2027 er jeg teamleder for en lounge
+            under NM i poker i Bratislava.
           </p>
           <p>
-            Noen ganger betyr det å være den ekstra stemmen i et møte. Andre ganger betyr det å stå midt i gjennomføringen
-            og sørge for at mennesker, energi og detaljer faktisk fungerer.
+            Fellesnevneren er mennesker. Jeg leser rom raskt, og jeg liker å gjøre det lettere for folk å møtes.
           </p>
 
           <div class="principles">
             <div class="principle">
-              <strong>Se annerledes</strong>
-              <span>Nye perspektiver før nye løsninger.</span>
+              <strong>Se alle</strong>
+              <span>Også de som ikke tar plass.</span>
             </div>
             <div class="principle">
-              <strong>Gjør andre bedre</strong>
+              <strong>Gjør rommet bedre</strong>
               <span>Jeg vil løfte rommet, ikke eie scenen.</span>
             </div>
             <div class="principle">
@@ -286,11 +311,10 @@
 
     <section>
       <div class="wrap">
-        <div class="section-kicker">Hvordan jeg jobber</div>
-        <h2>Ikke et standard konsulentprodukt.</h2>
+        <div class="section-kicker">Hvordan vi kommer i gang</div>
+        <h2>Én kort prat. Så er vi i gang.</h2>
         <p class="section-intro">
-          Førstepraten handler om å forstå problemet. Deretter avtaler vi form, omfang og pris.
-          Sparring kan være én time. Et oppdrag kan være én dag. Noen problemer trenger mer tid.
+          Først snakker vi om arrangementet og menneskene som kommer. Så avtaler vi opplegg og pris. Det er alt.
         </p>
       </div>
     </section>
@@ -300,9 +324,9 @@
         <div class="contact">
           <div>
             <div class="section-kicker" style="color:#c7b2ef">Kontakt</div>
-            <h2>Har du en problemstilling?</h2>
+            <h2>Planlegger du et arrangement?</h2>
             <p>
-              Fortell meg hva du prøver å løse. Hvis jeg tror jeg kan bidra, finner vi en enkel måte å teste det på.
+              Fortell meg om det, så finner vi ut om jeg passer inn.
             </p>
           </div>
           <div class="contact-links">
@@ -318,7 +342,7 @@
 
   <footer>
     <div class="wrap">
-      © 2026 Phelix Kraft · Kraft på Oppdrag
+      © 2026 Phelix Kraft ENK
     </div>
   </footer>
 </body>
