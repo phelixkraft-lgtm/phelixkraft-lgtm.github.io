@@ -236,9 +236,14 @@
     .story{max-width:760px}
     .story p{font-size:1.14rem;color:#514a57;margin:0 0 18px}
     .story p.lead-line{font-size:1.3rem;font-weight:800;color:var(--ink)}
-    .photo{border-radius:30px;background:var(--soft);border:2px dashed #d7cbe6;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:700;padding:24px}
+    .photo{border-radius:30px;color:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:34px;
+      background:radial-gradient(circle at 22% 18%,rgba(255,255,255,.22),transparent 32%),linear-gradient(150deg,var(--purple-dark),#7b46c8 55%,var(--green));box-shadow:var(--shadow)}
+    .photo .small{font-weight:800;letter-spacing:.14em;font-size:.82rem;opacity:.85;text-transform:uppercase}
+    .photo .mono{font-size:clamp(6rem,14vw,10rem);font-weight:900;line-height:.8;letter-spacing:-.06em;opacity:.95}
+    .photo .tag{font-weight:700;opacity:.8}
     .photo.portrait{aspect-ratio:4/5;min-height:360px}
-    .photo.wide{aspect-ratio:16/10;margin-top:36px}
+    .photo.wide{aspect-ratio:16/9;margin-top:36px;justify-content:center;align-items:center;text-align:center}
+    .photo.wide .line{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:850;letter-spacing:-.02em}
     .quote-band{background:var(--purple-dark);color:#fff;border-radius:34px;padding:56px 48px}
     .quote-band p{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.15;letter-spacing:-.025em;font-weight:850;margin:0;max-width:900px}
     .quote-band small{display:block;margin-top:22px;opacity:.75;font-weight:700}
@@ -296,7 +301,7 @@
         <p class="lead">En historie om forventninger, ensomhet, identitet og det å finne tilbake til seg selv.</p>
         <p class="lead">Dette er litt av den historien.</p>
       </div>
-      <div class="photo portrait" role="img" aria-label="Plass til portrett av Phelix">Plass til portrett av Phelix</div>
+      <div class="photo portrait" aria-hidden="true"><div class="small">Mennesket bak KRAFT</div><div class="mono">P</div><div class="tag">Phelix · Oslo</div></div>
     </div>
   </header>
 
@@ -338,7 +343,7 @@
         <p class="lead-line">Slik ble KRAFT til.</p>
         <p>Ikke som et løfte om at jeg har funnet svarene på livet.</p>
         <p>Men som et tilbud til mennesker som ønsker å utforske sine egne.</p>
-        <div class="photo wide" role="img" aria-label="Plass til et naturlig bilde av Phelix">Plass til et naturlig bilde av Phelix</div>
+        <div class="photo wide" aria-hidden="true"><div class="line">Selvinnsikt · Mot · Frihet</div></div>
       </div>
     </section>
 
