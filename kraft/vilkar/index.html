@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vilkår og rammer – KRAFT coaching | Phelix Kraft</title>
+  <meta name="description" content="Vilkår og rammer for coaching hos Phelix Kraft: hva coaching er, hjelp ved krise, taushetsplikt, avbestilling, betaling og personvern." />
+  <style>
+    :root{
+      --bg:#fbfafc;
+      --ink:#1c1820;
+      --muted:#6d6672;
+      --purple:#6f3cc3;
+      --purple-dark:#4f2597;
+      --green:#183f34;
+      --card:#ffffff;
+      --line:#e9e3ee;
+      --soft:#f2edf7;
+      --max:1120px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(50, 30, 72, .08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    nav{
+      position:sticky;top:0;z-index:30;
+      background:rgba(251,250,252,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(233,227,238,.8);
+    }
+    .nav-inner{
+      min-height:74px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .brand strong{font-size:1.25rem;color:var(--purple-dark)}
+    .brand span{font-size:.82rem;color:var(--muted);font-weight:700}
+    .nav-links{display:flex;gap:18px;align-items:center;font-size:.95rem;color:var(--muted)}
+    .nav-links a:hover{color:var(--ink)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:999px;
+      background:var(--purple);color:#fff;font-weight:800;
+      border:1px solid var(--purple);
+      transition:.18s ease;
+    }
+    .btn:hover{transform:translateY(-1px);background:var(--purple-dark)}
+    .btn.ghost{background:transparent;color:var(--purple-dark)}
+    .btn.ghost:hover{background:var(--soft)}
+    header{
+      padding:94px 0 72px;
+      overflow:hidden;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:54px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--green);margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(3rem,7vw,6.3rem);
+      line-height:.92;letter-spacing:-.06em;
+      margin:0 0 24px;
+      max-width:850px;
+    }
+    h1 .accent{color:var(--purple)}
+    .lead{
+      font-size:clamp(1.16rem,2vw,1.5rem);
+      color:var(--muted);max-width:760px;margin:0 0 32px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{
+      min-height:390px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.24), transparent 28%),
+        linear-gradient(145deg, var(--purple-dark), #7b46c8 52%, var(--green));
+      color:white;
+      box-shadow:var(--shadow);
+      padding:34px;
+      display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .hero-card .quote{
+      font-size:clamp(1.7rem,3vw,2.8rem);
+      line-height:1.05;letter-spacing:-.04em;font-weight:850;
+    }
+    .hero-card .small{opacity:.8;font-weight:700}
+    section{padding:78px 0}
+    .section-kicker{
+      color:var(--purple-dark);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin-bottom:12px
+    }
+    h2{
+      font-size:clamp(2rem,4vw,3.6rem);
+      line-height:1.02;letter-spacing:-.04em;margin:0 0 18px;
+    }
+    .section-intro{max-width:760px;color:var(--muted);font-size:1.08rem;margin-bottom:32px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 8px 30px rgba(50,30,72,.035);
+    }
+    .card .num{font-size:.78rem;font-weight:900;color:var(--purple);letter-spacing:.1em}
+    .card h3{font-size:1.25rem;margin:16px 0 10px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted)}
+    .card .price{margin-top:18px;font-weight:850;color:var(--ink)}
+    .split{
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;
+    }
+    .statement{
+      background:var(--green);color:white;border-radius:30px;padding:36px;
+      display:flex;flex-direction:column;justify-content:space-between;
+      min-height:340px;
+    }
+    .statement p{font-size:clamp(1.6rem,3vw,2.7rem);line-height:1.08;letter-spacing:-.03em;font-weight:800;margin:0}
+    .statement small{opacity:.72;font-weight:700}
+    .about{
+      background:var(--soft);border-radius:30px;padding:36px;
+    }
+    .about p{color:#514a57;font-size:1.08rem}
+    .principles{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+    }
+    .principle{
+      border-top:1px solid var(--line);padding-top:18px;
+    }
+    .principle strong{display:block;margin-bottom:5px}
+    .contact{
+      background:#17131a;color:white;border-radius:34px;padding:42px;
+      display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;
+    }
+    .contact p{color:#cfc8d2;max-width:650px}
+    .contact .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact .contact-links a{color:white;font-weight:800;border-bottom:1px solid rgba(255,255,255,.22)}
+    .note{margin-top:22px;color:var(--muted);font-size:1.02rem}
+    .note a{color:var(--purple-dark);font-weight:800;border-bottom:1px solid var(--line)}
+    .about.full{max-width:none}
+    .menu-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid var(--line);
+      background:#fff;color:var(--ink);font:inherit;font-weight:800;cursor:pointer;
+    }
+    .menu-btn:hover{background:var(--soft)}
+    .menu-btn .bars{display:inline-block;width:16px;height:2px;background:currentColor;position:relative}
+    .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor}
+    .menu-btn .bars::before{top:-5px}.menu-btn .bars::after{top:5px}
+    .scrim{position:fixed;inset:0;background:rgba(23,19,26,.45);opacity:0;pointer-events:none;transition:.2s;z-index:40}
+    .side-menu{
+      position:fixed;top:0;right:0;height:100%;width:min(340px,86vw);
+      background:var(--bg);z-index:50;padding:26px 26px 32px;
+      transform:translateX(100%);transition:transform .25s ease;
+      visibility:hidden;
+      display:flex;flex-direction:column;gap:6px;overflow-y:auto;
+    }
+    body.menu-open .scrim{opacity:1;pointer-events:auto}
+    body.menu-open .side-menu{transform:none;visibility:visible;box-shadow:-20px 0 60px rgba(50,30,72,.18)}
+    section,header{scroll-margin-top:80px}
+    .brand strong{white-space:nowrap}
+    .side-menu .close{align-self:flex-end;border:0;background:none;font-size:1.8rem;line-height:1;cursor:pointer;color:var(--muted)}
+    .side-menu .group{font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:18px 0 4px}
+    .side-menu a{display:block;padding:10px 0;font-size:1.15rem;font-weight:800;border-bottom:1px solid var(--line)}
+    .side-menu a:hover,.side-menu a[aria-current="page"]{color:var(--purple)}
+    .side-menu a.feature{margin-top:14px;padding:16px 18px;border:0;border-radius:18px;background:var(--purple);color:#fff}
+    .side-menu a.feature small{display:block;font-weight:600;opacity:.85;font-size:.9rem}
+    .side-menu a.feature:hover{background:var(--purple-dark);color:#fff}
+    footer{padding:34px 0 46px;color:var(--muted);font-size:.9rem}
+    @media (max-width:900px){
+      .hero,.split,.contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .hero-card{min-height:300px}
+      .nav-links a:not(.btn){display:none}
+    }
+    @media (max-width:620px){
+      header{padding-top:64px}
+      .grid,.principles{grid-template-columns:1fr}
+      .wrap{padding:0 18px}
+      .card,.about,.statement,.contact{padding:24px}
+      .brand span{display:none}
+      .nav-links{gap:8px}
+      .nav-links .btn{display:none}
+    }
+  </style>
+  <style>
+    .price-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+    .price-card.highlight{background:linear-gradient(145deg,var(--purple-dark),#7b46c8 60%,var(--green));color:#fff;border:0;box-shadow:var(--shadow)}
+    .price-card .tag{font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+    .price-card.highlight .tag{color:#e4d6ff}
+    .price-card h3{font-size:1.45rem;margin:12px 0 6px;letter-spacing:-.02em}
+    .price-card .amount{font-size:2.2rem;font-weight:900;letter-spacing:-.04em;margin:6px 0 2px}
+    .price-card .per{color:var(--muted);font-weight:700;font-size:.95rem}
+    .price-card.highlight .per{color:#e4d6ff}
+    .price-card ul{margin:18px 0 0;padding-left:20px;color:var(--muted)}
+    .price-card.highlight ul{color:#f1eafc}
+    .price-card li{margin:6px 0}
+    .price-card .btn{margin-top:auto;align-self:flex-start}
+    .price-card .cta{margin-top:24px}
+    .price-card.highlight .btn{background:#fff;color:var(--purple-dark);border-color:#fff}
+    .fine{color:var(--muted);font-size:.95rem;margin-top:18px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+    .step{border-top:2px solid var(--purple);padding-top:16px}
+    .step strong{display:block;margin-bottom:6px;font-size:1.08rem}
+    .step span{color:var(--muted)}
+    .grid.four{grid-template-columns:repeat(2,1fr)}
+    .price-card p{color:var(--muted);margin:14px 0 0}
+    .price-card .sub{font-weight:800;color:var(--ink);margin-top:14px}
+    .lead + .lead{margin-top:-14px}
+    .about p.big{font-size:1.35rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    @media (max-width:900px){.price-list,.steps,.grid.four{grid-template-columns:1fr}}
+  </style>
+  <style>
+    .doc{max-width:760px}
+    .doc h2{font-size:clamp(1.5rem,3vw,2rem);margin:44px 0 12px}
+    .doc p,.doc li{color:#514a57;font-size:1.06rem}
+    .doc ul{padding-left:22px}
+    .crisis{background:var(--green);color:#fff;border-radius:var(--radius);padding:26px 28px;margin:28px 0 8px}
+    .crisis h2{color:#fff;margin:0 0 10px;font-size:1.5rem}
+    .crisis p,.crisis li{color:#e6f0ec}
+    .crisis a{white-space:nowrap;color:#fff;font-weight:800;border-bottom:1px solid rgba(255,255,255,.4)}
+    .crisis ul{margin:10px 0 0;padding-left:20px}
+    .back{display:inline-block;margin-bottom:26px;color:var(--purple-dark);font-weight:800}
+    .doc .updated{color:var(--muted);font-size:.92rem;margin-top:40px}
+  </style>
+</head>
+<body>
+  <div class="scrim" data-close-menu></div>
+  <aside class="side-menu" id="meny" aria-label="Meny" aria-hidden="true">
+    <button class="close" type="button" data-close-menu aria-label="Lukk meny">×</button>
+    <div class="group">Vert og events</div>
+    <a href="/#tjenester">Tjenester og priser</a>
+    <a href="/#kvelden">Slik jobber jeg</a>
+    <a href="/#om">Om meg</a>
+    <div class="group">Coaching</div>
+    <a href="/kraft/">KRAFT – personlig coaching</a>
+    <a href="/kraft/#priser">Priser coaching</a>
+    <a href="/kraft/#tjenester">Hva vi jobber med</a>
+    <a href="/kraft/#om">Hvem jeg er</a>
+    <a href="/kraft/vilkar/">Vilkår og rammer</a>
+    <a class="feature" href="/#kontakt">Book en prat<small>phelix@phelixkraft.no · 977 17 355</small></a>
+  </aside>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="/kraft/" aria-label="KRAFT coaching">
+        <strong>PHELIX KRAFT</strong><span>Coaching</span>
+      </a>
+      <div class="nav-links">
+        <a href="/kraft/#tjenester">Hva vi jobber med</a>
+        <a href="/kraft/#priser">Priser</a>
+        <a href="/kraft/#tilnaerming">Tilnærming</a>
+        <a href="/kraft/#om">Om meg</a>
+        <a class="btn" href="/kraft/#kontakt">Book en prat</a>
+        <button class="menu-btn" type="button" aria-controls="meny" aria-expanded="false"><span class="bars"></span>Meny</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <section style="padding-top:56px">
+      <div class="wrap doc">
+        <a class="back" href="/kraft/">← Tilbake til coaching</a>
+        <div class="section-kicker">KRAFT · Personlig coaching</div>
+        <h1 style="font-size:clamp(2.4rem,6vw,4rem)">Vilkår og rammer</h1>
+        <p>Her finner du rammene for coaching hos meg. Les dem gjerne før vi starter. Har du spørsmål, tar vi dem i bli-kjent-praten.</p>
+
+        <div class="crisis" id="hjelp">
+          <h2>Har du det vanskelig akkurat nå?</h2>
+          <p>Coaching er ikke riktig hjelp i en krise. Ta kontakt med noen som kan hjelpe deg med en gang:</p>
+          <ul>
+            <li>Akutt fare for liv eller helse: ring <a href="tel:113">113</a></li>
+            <li>Legevakt: <a href="tel:116117">116 117</a></li>
+            <li>Mental Helse Hjelpetelefonen, døgnåpen: <a href="tel:116123">116 123</a></li>
+            <li>Kirkens SOS, døgnåpen: <a href="tel:22400040">22 40 00 40</a></li>
+            <li>Fastlegen din, for hjelp videre</li>
+          </ul>
+        </div>
+
+        <h2>Hva coaching er, og ikke er</h2>
+        <p>Coaching er samtaler og praktiske øvelser som skal hjelpe deg å forstå deg selv bedre, finne retning og ta steg i livet ditt. Coaching er ikke psykologisk eller medisinsk behandling, og erstatter ikke hjelp fra lege, psykolog eller annet helsepersonell.</p>
+        <p>Hvis det underveis kommer frem ting som hører hjemme hos helsetjenesten, sier jeg fra og hjelper deg å finne riktig hjelp. Da kan vi ta pause i coachingen eller avslutte den.</p>
+
+        <h2>Ditt ansvar og mitt</h2>
+        <p>Jeg stiller spørsmål, utfordrer og går ved siden av deg. Du tar dine egne valg og har ansvaret for dem. Jeg kan ikke garantere et bestemt resultat, men jeg lover å gi deg min fulle oppmerksomhet og ærlige tilbakemeldinger.</p>
+
+        <h2>Taushetsplikt</h2>
+        <p>Det du forteller meg, blir mellom oss. Jeg deler ikke noe om deg eller det vi snakker om med andre uten at du har sagt ja.</p>
+        <p>Unntaket er hvis jeg mener at liv eller helse er i alvorlig fare, eller hvis loven pålegger meg å si fra. Da tar jeg det opp med deg først hvis det er mulig.</p>
+
+        <h2>Avbestilling</h2>
+        <ul>
+          <li>Du kan flytte eller avbestille en time gratis frem til 24 timer før.</li>
+          <li>Ved avbestilling senere enn 24 timer før, eller hvis du ikke møter, faktureres timen som vanlig. I en pakke regnes den som brukt.</li>
+          <li>Må jeg avlyse, finner vi en ny tid, og du betaler ingenting ekstra.</li>
+        </ul>
+
+        <h2>Betaling</h2>
+        <ul>
+          <li>Alle priser er inkludert mva.</li>
+          <li>Bli-kjent-praten er gratis og uforpliktende.</li>
+          <li>Enkeltsamtale og Dypdykk faktureres etter timen.</li>
+          <li>Startmåned faktureres når måneden er over.</li>
+          <li>Kraftpakken faktureres i tre like avdrag, ett etter hver måned, med mindre vi avtaler noe annet.</li>
+          <li>Betalingsfristen er 14 dager fra fakturadato.</li>
+          <li>For Startmåned og Kraftpakken lager vi en kort skriftlig avtale før vi starter, med mål, omfang og hva som skjer hvis en av oss vil avslutte.</li>
+        </ul>
+
+        <h2>Personvern</h2>
+        <p>Phelix Kraft ENK (org.nr. 938 559 422) er ansvarlig for opplysningene jeg tar imot om deg.</p>
+        <ul>
+          <li><strong>Hva jeg lagrer:</strong> navn og kontaktinformasjon, korte notater fra samtalene våre, og det som trengs for å fakturere.</li>
+          <li><strong>Hvorfor:</strong> for å kunne gi deg coaching, følge deg opp og sende faktura.</li>
+          <li><strong>Hvor lenge:</strong> notater fra samtalene slettes senest 12 måneder etter at vi har avsluttet. Faktura og regnskap oppbevares så lenge bokføringsloven krever.</li>
+          <li><strong>Deling:</strong> jeg selger eller deler ikke opplysningene dine. De lagres hos leverandørene jeg bruker til e-post og regnskap.</li>
+          <li><strong>Dine rettigheter:</strong> du kan når som helst be om innsyn, retting eller sletting. Send en e-post til <a href="mailto:phelix@phelixkraft.no" style="color:var(--purple-dark);font-weight:800">phelix@phelixkraft.no</a>. Du kan også klage til Datatilsynet.</li>
+        </ul>
+
+        <h2>Spørsmål</h2>
+        <p>Lurer du på noe? Send meg en e-post på <a href="mailto:phelix@phelixkraft.no" style="color:var(--purple-dark);font-weight:800">phelix@phelixkraft.no</a> eller ring <a href="tel:+4797717355" style="color:var(--purple-dark);font-weight:800">977 17 355</a>.</p>
+        <p class="updated">Sist oppdatert: november 2026</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Phelix Kraft ENK · Org.nr. 938 559 422 · <a href="/">Vert og events</a>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      var b=document.body, btn=document.querySelector('.menu-btn'), m=document.getElementById('meny');
+      function set(open){b.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open);m.setAttribute('aria-hidden',!open);if(open){m.querySelector('a').focus()}}
+      btn.addEventListener('click',function(){set(!b.classList.contains('menu-open'))});
+      document.querySelectorAll('[data-close-menu]').forEach(function(e){e.addEventListener('click',function(){set(false)})});
+      m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+    })();
+  </script>
+</body>
+</html>
