@@ -241,6 +241,8 @@
     .photo .small{font-weight:800;letter-spacing:.14em;font-size:.82rem;opacity:.85;text-transform:uppercase}
     .photo .mono{font-size:clamp(6rem,14vw,10rem);font-weight:900;line-height:.8;letter-spacing:-.06em;opacity:.95}
     .photo .tag{font-weight:700;opacity:.8}
+    .photo.art{padding:0;display:block}
+    .photo.art svg{display:block;width:100%;height:100%}
     .photo.portrait{aspect-ratio:4/5;min-height:360px}
     .photo.wide{aspect-ratio:16/9;margin-top:36px;justify-content:center;align-items:center;text-align:center}
     .photo.wide .line{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:850;letter-spacing:-.02em}
@@ -301,7 +303,19 @@
         <p class="lead">En historie om forventninger, ensomhet, identitet og det å finne tilbake til seg selv.</p>
         <p class="lead">Dette er litt av den historien.</p>
       </div>
-      <div class="photo portrait" aria-hidden="true"><div class="small">Mennesket bak KRAFT</div><div class="mono">P</div><div class="tag">Phelix · Oslo</div></div>
+      <div class="photo portrait art" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2edf7"/><stop offset=".55" stop-color="#c9b4ec"/><stop offset="1" stop-color="#4f2597"/></linearGradient>
+    <radialGradient id="glow1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="path1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fbfafc"/><stop offset="1" stop-color="#fbfafc" stop-opacity=".35"/></linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg1)"/>
+  <circle cx="250" cy="175" r="120" fill="url(#glow1)"/>
+  <path d="M0 300 C 90 270, 160 290, 230 268 S 340 250, 400 262 L400 500 L0 500 Z" fill="#7b46c8" opacity=".55"/>
+  <path d="M0 345 C 110 320, 190 350, 280 322 S 360 305, 400 312 L400 500 L0 500 Z" fill="#6f3cc3" opacity=".8"/>
+  <path d="M0 400 C 120 380, 220 410, 300 385 S 370 372, 400 378 L400 500 L0 500 Z" fill="#183f34" opacity=".9"/>
+  <path d="M120 500 C 150 440, 270 430, 225 380 S 200 320, 250 268" fill="none" stroke="url(#path1)" stroke-width="18" stroke-linecap="round"/>
+</svg></div>
     </div>
   </header>
 
@@ -343,7 +357,16 @@
         <p class="lead-line">Slik ble KRAFT til.</p>
         <p>Ikke som et løfte om at jeg har funnet svarene på livet.</p>
         <p>Men som et tilbud til mennesker som ønsker å utforske sine egne.</p>
-        <div class="photo wide" aria-hidden="true"><div class="line">Selvinnsikt · Mot · Frihet</div></div>
+        <div class="photo wide art" aria-hidden="true"><svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f2597"/><stop offset=".6" stop-color="#7b46c8"/><stop offset="1" stop-color="#183f34"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <path d="M-20 360 C 140 330, 220 200, 380 210 S 600 300, 820 120" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M-20 395 C 150 365, 230 240, 390 248 S 610 335, 820 160" fill="none" stroke="#c7b2ef" stroke-opacity=".75" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 18"/>
+  <circle cx="380" cy="210" r="11" fill="#fff"/>
+  <circle cx="390" cy="248" r="11" fill="#c7b2ef"/>
+</svg></div>
       </div>
     </section>
 
