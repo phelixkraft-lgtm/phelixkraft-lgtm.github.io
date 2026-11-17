@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mennesket bak KRAFT – Phelix | Phelix Kraft</title>
+  <meta name="description" content="Historien bak KRAFT: Phelix om ensomhet, identitet og veien tilbake til seg selv, og om faglig bakgrunn fra undervisning, veiledning og coaching." />
+  <link rel="canonical" href="https://phelixkraft.no/kraft/om-meg/" />
+  <meta property="og:title" content="Mennesket bak KRAFT" />
+  <meta property="og:description" content="Før jeg kunne hjelpe andre med å finne sin vei, måtte jeg finne min egen." />
+  <meta property="og:url" content="https://phelixkraft.no/kraft/om-meg/" />
+  <meta property="og:type" content="profile" />
+  <style>
+    :root{
+      --bg:#fbfafc;
+      --ink:#1c1820;
+      --muted:#6d6672;
+      --purple:#6f3cc3;
+      --purple-dark:#4f2597;
+      --green:#183f34;
+      --card:#ffffff;
+      --line:#e9e3ee;
+      --soft:#f2edf7;
+      --max:1120px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(50, 30, 72, .08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    nav{
+      position:sticky;top:0;z-index:30;
+      background:rgba(251,250,252,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(233,227,238,.8);
+    }
+    .nav-inner{
+      min-height:74px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .brand strong{font-size:1.25rem;color:var(--purple-dark)}
+    .brand span{font-size:.82rem;color:var(--muted);font-weight:700}
+    .nav-links{display:flex;gap:18px;align-items:center;font-size:.95rem;color:var(--muted)}
+    .nav-links a:hover{color:var(--ink)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:999px;
+      background:var(--purple);color:#fff;font-weight:800;
+      border:1px solid var(--purple);
+      transition:.18s ease;
+    }
+    .btn:hover{transform:translateY(-1px);background:var(--purple-dark)}
+    .btn.ghost{background:transparent;color:var(--purple-dark)}
+    .btn.ghost:hover{background:var(--soft)}
+    header{
+      padding:94px 0 72px;
+      overflow:hidden;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:54px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--green);margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(3rem,7vw,6.3rem);
+      line-height:.92;letter-spacing:-.06em;
+      margin:0 0 24px;
+      max-width:850px;
+    }
+    h1 .accent{color:var(--purple)}
+    .lead{
+      font-size:clamp(1.16rem,2vw,1.5rem);
+      color:var(--muted);max-width:760px;margin:0 0 32px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{
+      min-height:390px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.24), transparent 28%),
+        linear-gradient(145deg, var(--purple-dark), #7b46c8 52%, var(--green));
+      color:white;
+      box-shadow:var(--shadow);
+      padding:34px;
+      display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .hero-card .quote{
+      font-size:clamp(1.7rem,3vw,2.8rem);
+      line-height:1.05;letter-spacing:-.04em;font-weight:850;
+    }
+    .hero-card .small{opacity:.8;font-weight:700}
+    section{padding:78px 0}
+    .section-kicker{
+      color:var(--purple-dark);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin-bottom:12px
+    }
+    h2{
+      font-size:clamp(2rem,4vw,3.6rem);
+      line-height:1.02;letter-spacing:-.04em;margin:0 0 18px;
+    }
+    .section-intro{max-width:760px;color:var(--muted);font-size:1.08rem;margin-bottom:32px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 8px 30px rgba(50,30,72,.035);
+    }
+    .card .num{font-size:.78rem;font-weight:900;color:var(--purple);letter-spacing:.1em}
+    .card h3{font-size:1.25rem;margin:16px 0 10px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted)}
+    .card .price{margin-top:18px;font-weight:850;color:var(--ink)}
+    .split{
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;
+    }
+    .statement{
+      background:var(--green);color:white;border-radius:30px;padding:36px;
+      display:flex;flex-direction:column;justify-content:space-between;
+      min-height:340px;
+    }
+    .statement p{font-size:clamp(1.6rem,3vw,2.7rem);line-height:1.08;letter-spacing:-.03em;font-weight:800;margin:0}
+    .statement small{opacity:.72;font-weight:700}
+    .about{
+      background:var(--soft);border-radius:30px;padding:36px;
+    }
+    .about p{color:#514a57;font-size:1.08rem}
+    .principles{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+    }
+    .principle{
+      border-top:1px solid var(--line);padding-top:18px;
+    }
+    .principle strong{display:block;margin-bottom:5px}
+    .contact{
+      background:#17131a;color:white;border-radius:34px;padding:42px;
+      display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;
+    }
+    .contact p{color:#cfc8d2;max-width:650px}
+    .contact .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact .contact-links a{color:white;font-weight:800;border-bottom:1px solid rgba(255,255,255,.22)}
+    .note{margin-top:22px;color:var(--muted);font-size:1.02rem}
+    .note a{color:var(--purple-dark);font-weight:800;border-bottom:1px solid var(--line)}
+    .about.full{max-width:none}
+    .menu-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid var(--line);
+      background:#fff;color:var(--ink);font:inherit;font-weight:800;cursor:pointer;
+    }
+    .menu-btn:hover{background:var(--soft)}
+    .menu-btn .bars{display:inline-block;width:16px;height:2px;background:currentColor;position:relative}
+    .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor}
+    .menu-btn .bars::before{top:-5px}.menu-btn .bars::after{top:5px}
+    .scrim{position:fixed;inset:0;background:rgba(23,19,26,.45);opacity:0;pointer-events:none;transition:.2s;z-index:40}
+    .side-menu{
+      position:fixed;top:0;right:0;height:100%;width:min(340px,86vw);
+      background:var(--bg);z-index:50;padding:26px 26px 32px;
+      transform:translateX(100%);transition:transform .25s ease;
+      visibility:hidden;
+      display:flex;flex-direction:column;gap:6px;overflow-y:auto;
+    }
+    body.menu-open .scrim{opacity:1;pointer-events:auto}
+    body.menu-open .side-menu{transform:none;visibility:visible;box-shadow:-20px 0 60px rgba(50,30,72,.18)}
+    section,header{scroll-margin-top:80px}
+    .brand strong{white-space:nowrap}
+    .side-menu .close{align-self:flex-end;border:0;background:none;font-size:1.8rem;line-height:1;cursor:pointer;color:var(--muted)}
+    .side-menu .group{font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:18px 0 4px}
+    .side-menu a{display:block;padding:10px 0;font-size:1.15rem;font-weight:800;border-bottom:1px solid var(--line)}
+    .side-menu a:hover,.side-menu a[aria-current="page"]{color:var(--purple)}
+    .side-menu a.feature{margin-top:14px;padding:16px 18px;border:0;border-radius:18px;background:var(--purple);color:#fff}
+    .side-menu a.feature small{display:block;font-weight:600;opacity:.85;font-size:.9rem}
+    .side-menu a.feature:hover{background:var(--purple-dark);color:#fff}
+    footer{padding:34px 0 46px;color:var(--muted);font-size:.9rem}
+    @media (max-width:900px){
+      .hero,.split,.contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .hero-card{min-height:300px}
+      .nav-links a:not(.btn){display:none}
+    }
+    @media (max-width:620px){
+      header{padding-top:64px}
+      .grid,.principles{grid-template-columns:1fr}
+      .wrap{padding:0 18px}
+      .card,.about,.statement,.contact{padding:24px}
+      .brand span{display:none}
+      .nav-links{gap:8px}
+      .nav-links .btn{display:none}
+    }
+  </style>
+  <style>
+    .price-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+    .price-card.highlight{background:linear-gradient(145deg,var(--purple-dark),#7b46c8 60%,var(--green));color:#fff;border:0;box-shadow:var(--shadow)}
+    .price-card .tag{font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--purple)}
+    .price-card.highlight .tag{color:#e4d6ff}
+    .price-card h3{font-size:1.45rem;margin:12px 0 6px;letter-spacing:-.02em}
+    .price-card .amount{font-size:2.2rem;font-weight:900;letter-spacing:-.04em;margin:6px 0 2px}
+    .price-card .per{color:var(--muted);font-weight:700;font-size:.95rem}
+    .price-card.highlight .per{color:#e4d6ff}
+    .price-card ul{margin:18px 0 0;padding-left:20px;color:var(--muted)}
+    .price-card.highlight ul{color:#f1eafc}
+    .price-card li{margin:6px 0}
+    .price-card .btn{margin-top:auto;align-self:flex-start}
+    .price-card .cta{margin-top:24px}
+    .price-card.highlight .btn{background:#fff;color:var(--purple-dark);border-color:#fff}
+    .fine{color:var(--muted);font-size:.95rem;margin-top:18px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+    .step{border-top:2px solid var(--purple);padding-top:16px}
+    .step strong{display:block;margin-bottom:6px;font-size:1.08rem}
+    .step span{color:var(--muted)}
+    .grid.four{grid-template-columns:repeat(2,1fr)}
+    .price-card p{color:var(--muted);margin:14px 0 0}
+    .price-card .sub{font-weight:800;color:var(--ink);margin-top:14px}
+    .lead + .lead{margin-top:-14px}
+    .about p.big{font-size:1.35rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+    @media (max-width:900px){.price-list,.steps,.grid.four{grid-template-columns:1fr}}
+  </style>
+  <style>
+    .story{max-width:760px}
+    .story p{font-size:1.14rem;color:#514a57;margin:0 0 18px}
+    .story p.lead-line{font-size:1.3rem;font-weight:800;color:var(--ink)}
+    .photo{border-radius:30px;background:var(--soft);border:2px dashed #d7cbe6;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:700;padding:24px}
+    .photo.portrait{aspect-ratio:4/5;min-height:360px}
+    .photo.wide{aspect-ratio:16/10;margin-top:36px}
+    .quote-band{background:var(--purple-dark);color:#fff;border-radius:34px;padding:56px 48px}
+    .quote-band p{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.15;letter-spacing:-.025em;font-weight:850;margin:0;max-width:900px}
+    .quote-band small{display:block;margin-top:22px;opacity:.75;font-weight:700}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .col{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+    .col h3{margin:0 0 14px;font-size:1.3rem;color:var(--purple-dark)}
+    .col ul{margin:0;padding-left:20px;color:#514a57}
+    .col li{margin:8px 0;font-size:1.05rem}
+    .hero.about-hero{grid-template-columns:1.2fr .8fr}
+    .hero.about-hero h1{font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1;letter-spacing:-.04em}
+    @media (max-width:900px){.cols{grid-template-columns:1fr}.quote-band{padding:34px 26px}}
+  </style>
+</head>
+<body>
+  <div class="scrim" data-close-menu></div>
+  <aside class="side-menu" id="meny" aria-label="Meny" aria-hidden="true">
+    <button class="close" type="button" data-close-menu aria-label="Lukk meny">×</button>
+    <div class="group">Vert og events</div>
+    <a href="/#tjenester">Tjenester og priser</a>
+    <a href="/#kvelden">Slik jobber jeg</a>
+    <a href="/#om">Om meg</a>
+    <div class="group">Coaching</div>
+    <a href="/kraft/">KRAFT – personlig coaching</a>
+    <a href="/kraft/#priser">Priser coaching</a>
+    <a href="/kraft/#tjenester">Hva vi jobber med</a>
+    <a href="/kraft/om-meg/" aria-current="page">Mennesket bak KRAFT</a>
+    <a href="/kraft/vilkar/">Vilkår og rammer</a>
+    <a class="feature" href="/#kontakt">Book en prat<small>phelix@phelixkraft.no · 977 17 355</small></a>
+  </aside>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="/kraft/" aria-label="KRAFT coaching">
+        <strong>PHELIX KRAFT</strong><span>Coaching</span>
+      </a>
+      <div class="nav-links">
+        <a href="/kraft/#tjenester">Hva vi jobber med</a>
+        <a href="/kraft/#priser">Priser</a>
+        <a href="/kraft/#tilnaerming">Tilnærming</a>
+        <a href="/kraft/#om">Om meg</a>
+        <a class="btn" href="/kraft/#kontakt">Book en prat</a>
+        <button class="menu-btn" type="button" aria-controls="meny" aria-expanded="false"><span class="bars"></span>Meny</button>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <header id="top">
+    <div class="wrap hero about-hero">
+      <div>
+        <div class="eyebrow">PHELIX · Mennesket bak KRAFT</div>
+        <h1>Før jeg kunne hjelpe andre med å finne sin vei, <span class="accent">måtte jeg finne min egen.</span></h1>
+        <p class="lead">Jeg heter Phelix. Jeg er lærerutdannet, veileder, coach og fremfor alt et menneske med en historie.</p>
+        <p class="lead">En historie om forventninger, ensomhet, identitet og det å finne tilbake til seg selv.</p>
+        <p class="lead">Dette er litt av den historien.</p>
+      </div>
+      <div class="photo portrait" role="img" aria-label="Plass til portrett av Phelix">Plass til portrett av Phelix</div>
+    </div>
+  </header>
+
+  <main>
+    <section id="historie">
+      <div class="wrap story">
+        <div class="section-kicker">Min historie</div>
+        <h2>Fra Kristoffer til Phelix</h2>
+        <p class="lead-line">Jeg het Kristoffer før jeg ble Phelix.</p>
+        <p>Det var ikke bare navnet som forandret seg.</p>
+        <p>I mange år forsøkte jeg å være den jeg trodde andre forventet at jeg skulle være. Jeg søkte bekreftelse, tilpasset meg og mistet gradvis kontakten med meg selv.</p>
+        <p>Bak fasaden fantes et menneske som lengtet etter ekte tilhørighet, men som ikke helt visste hvordan han skulle finne den.</p>
+        <p>Jeg har kjent på ensomhet, depresjon og følelsen av å stå stille mens verden beveget seg videre.</p>
+        <p>Men et sted under alle forventningene fantes fortsatt nysgjerrigheten, humoren og ønsket om å bety noe for andre mennesker.</p>
+        <p>Veien tilbake var verken rask eller rett frem.</p>
+        <p>Den handlet om å utfordre gamle forestillinger, våge å være sårbar, sette grenser og gradvis oppdage at jeg ikke trengte å prestere for å fortjene tilhørighet.</p>
+        <p>Jeg begynte å bygge relasjoner hvor jeg kunne være meg selv, uten å måtte spille en rolle.</p>
+        <p>Og kanskje viktigst av alt: Jeg lærte å møte meg selv med den samme forståelsen jeg alltid hadde ønsket å gi andre.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="quote-band">
+          <p>«Personlig utvikling handler ikke nødvendigvis om å bli en bedre versjon av seg selv. Noen ganger handler det om å slutte å være noen andre.»</p>
+          <small>— Phelix</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="kapittel">
+      <div class="wrap story">
+        <div class="section-kicker">Et nytt kapittel</div>
+        <h2>Da jeg sluttet å lete etter hvem jeg burde være</h2>
+        <p>Forandringen skjedde ikke over natten. Den kom gjennom erfaringer, samtaler, feiltrinn, nye perspektiver og mennesker som møtte meg med ekte omsorg.</p>
+        <p>Jeg begynte å forstå at trygghet ikke handler om å ha kontroll over alt, men om å kunne møte livet uten å miste seg selv.</p>
+        <p>Med tiden vokste det frem et ønske om å bruke erfaringene mine til noe meningsfullt.</p>
+        <p>Jeg hadde allerede arbeidet med mennesker i mange ulike roller. Nå ønsket jeg å samle erfaringene, kompetansen og engasjementet mitt i noe eget.</p>
+        <p class="lead-line">Slik ble KRAFT til.</p>
+        <p>Ikke som et løfte om at jeg har funnet svarene på livet.</p>
+        <p>Men som et tilbud til mennesker som ønsker å utforske sine egne.</p>
+        <div class="photo wide" role="img" aria-label="Plass til et naturlig bilde av Phelix">Plass til et naturlig bilde av Phelix</div>
+      </div>
+    </section>
+
+    <section id="kompetanse">
+      <div class="wrap">
+        <div class="about full">
+          <div class="section-kicker">Utdanning og kompetanse</div>
+          <h2>Mer enn livserfaring</h2>
+          <p>Min personlige historie har gitt meg perspektiver, men den står ikke alene. Jeg har også en faglig bakgrunn fra undervisning, veiledning, kommunikasjon og arbeid med mennesker.</p>
+          <div class="cols">
+            <div class="col">
+              <h3>Utdanning og kurs</h3>
+              <ul>
+                <li>Bachelorgrad i lærerutdanning, med idrett og matematikk</li>
+                <li>Kurs i motiverende intervju (MI)</li>
+                <li>Kurs i nevrolingvistisk programmering (NLP)</li>
+                <li>Kurs i positiv psykologi</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Praktisk erfaring</h3>
+              <ul>
+                <li>Undervisning og ungdomsveiledning</li>
+                <li>Coaching, motivasjon og personlig oppfølging</li>
+                <li>Idrettstrening og gruppeledelse</li>
+                <li>Relasjonsbygging og kommunikasjon</li>
+                <li>Arrangementer, workshops og sosiale møteplasser</li>
+                <li>Arbeid med mennesker fra ulike miljøer og livssituasjoner</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="filosofi">
+      <div class="wrap story">
+        <div class="section-kicker">Min filosofi</div>
+        <h2>Jeg ser ikke bare målet. Jeg er opptatt av hele veien dit.</h2>
+        <p>Jeg tror at mennesker rommer langt mer enn det som er synlig på overflaten.</p>
+        <p>Bak usikkerhet kan det ligge erfaringer vi ikke kjenner. Bak gamle vaner kan det finnes behov som en gang var viktige. Og bak ønsket om forandring ligger det ofte et menneske som bare ønsker å leve mer i tråd med seg selv.</p>
+        <p>Derfor er jeg mer opptatt av å forstå enn å dømme.</p>
+        <p>Jeg tror på nysgjerrighet, ærlige samtaler, humor og motet til å stille spørsmål ved det vi tar for gitt.</p>
+        <p class="lead-line">Men jeg tror også at utvikling krever handling.</p>
+        <p>Noen ganger trenger vi et nytt perspektiv. Andre ganger trenger vi å gå ut og erfare at verden ikke er helt slik vi forestilte oss.</p>
+        <p>Jeg skal ikke bestemme hvilken vei som er riktig for deg.</p>
+        <p>Min rolle er å hjelpe deg med å se mulighetene, utfordre perspektivene dine og finne tryggheten til å ta dine egne valg.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="quote-band">
+          <p>«Jeg kan gå ved siden av deg, men jeg skal ikke gå veien for deg.»</p>
+          <small>— Phelix</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="hvorfor">
+      <div class="wrap story">
+        <div class="section-kicker">Hvorfor jeg gjør dette</div>
+        <h2>Fra egne erfaringer til noe jeg kan gi videre</h2>
+        <p>Jeg vet hvordan det føles å miste seg selv.</p>
+        <p>Og jeg vet hvor verdifullt det kan være å bli møtt av noen som ser mennesket bak fasaden.</p>
+        <p class="lead-line">Det er dette jeg ønsker å gi videre.</p>
+        <p>Ikke fordi jeg har funnet fasiten, eller fordi min vei nødvendigvis er riktig for andre.</p>
+        <p>Men fordi jeg tror på menneskets evne til å vokse når det får rom til å utforske, feile, lære og finne sin egen retning.</p>
+        <p>For meg handler coaching ikke om å skape en ny versjon av deg.</p>
+        <p>Det handler om å gi deg muligheten til å bli bedre kjent med den du allerede er.</p>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="contact">
+          <div>
+            <div class="section-kicker" style="color:#c7b2ef">Kontakt</div>
+            <h2>Kanskje har vi noe å snakke om.</h2>
+            <p>Du trenger ikke ha en ferdig plan eller vite nøyaktig hva du ønsker å forandre. Noen ganger begynner utvikling med en enkel samtale.</p>
+            <p>Jeg tilbyr en gratis og uforpliktende bli-kjent-prat hvor vi kan utforske om coaching er riktig for deg.</p>
+          </div>
+          <div class="contact-links">
+            <a class="btn" style="border:0;margin-bottom:8px" href="mailto:phelix@phelixkraft.no?subject=Coaching%20%E2%80%93%20gratis%20prat">Book en gratis prat</a>
+            <a href="mailto:phelix@phelixkraft.no?subject=Coaching%20%E2%80%93%20gratis%20prat">E-post: phelix@phelixkraft.no</a>
+            <a href="/kraft/">Nettside: phelixkraft.no/kraft</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Phelix Kraft ENK · Org.nr. 938 559 422 · <a href="/">Vert og events</a> · <a href="/kraft/vilkar/">Vilkår og personvern</a>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      var b=document.body, btn=document.querySelector('.menu-btn'), m=document.getElementById('meny');
+      function set(open){b.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open);m.setAttribute('aria-hidden',!open);if(open){m.querySelector('a').focus()}}
+      btn.addEventListener('click',function(){set(!b.classList.contains('menu-open'))});
+      document.querySelectorAll('[data-close-menu]').forEach(function(e){e.addEventListener('click',function(){set(false)})});
+      m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+    })();
+  </script>
+</body>
+</html>
