@@ -154,6 +154,34 @@
     .note{margin-top:22px;color:var(--muted);font-size:1.02rem}
     .note a{color:var(--purple-dark);font-weight:800;border-bottom:1px solid var(--line)}
     .about.full{max-width:none}
+    .menu-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid var(--line);
+      background:#fff;color:var(--ink);font:inherit;font-weight:800;cursor:pointer;
+    }
+    .menu-btn:hover{background:var(--soft)}
+    .menu-btn .bars{display:inline-block;width:16px;height:2px;background:currentColor;position:relative}
+    .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor}
+    .menu-btn .bars::before{top:-5px}.menu-btn .bars::after{top:5px}
+    .scrim{position:fixed;inset:0;background:rgba(23,19,26,.45);opacity:0;pointer-events:none;transition:.2s;z-index:40}
+    .side-menu{
+      position:fixed;top:0;right:0;height:100%;width:min(340px,86vw);
+      background:var(--bg);z-index:50;padding:26px 26px 32px;
+      transform:translateX(100%);transition:transform .25s ease;
+      visibility:hidden;
+      display:flex;flex-direction:column;gap:6px;overflow-y:auto;
+    }
+    body.menu-open .scrim{opacity:1;pointer-events:auto}
+    body.menu-open .side-menu{transform:none;visibility:visible;box-shadow:-20px 0 60px rgba(50,30,72,.18)}
+    section,header{scroll-margin-top:80px}
+    .brand strong{white-space:nowrap}
+    .side-menu .close{align-self:flex-end;border:0;background:none;font-size:1.8rem;line-height:1;cursor:pointer;color:var(--muted)}
+    .side-menu .group{font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:18px 0 4px}
+    .side-menu a{display:block;padding:10px 0;font-size:1.15rem;font-weight:800;border-bottom:1px solid var(--line)}
+    .side-menu a:hover,.side-menu a[aria-current="page"]{color:var(--purple)}
+    .side-menu a.feature{margin-top:14px;padding:16px 18px;border:0;border-radius:18px;background:var(--purple);color:#fff}
+    .side-menu a.feature small{display:block;font-weight:600;opacity:.85;font-size:.9rem}
+    .side-menu a.feature:hover{background:var(--purple-dark);color:#fff}
     footer{padding:34px 0 46px;color:var(--muted);font-size:.9rem}
     @media (max-width:900px){
       .hero,.split,.contact{grid-template-columns:1fr}
@@ -168,10 +196,24 @@
       .card,.about,.statement,.contact{padding:24px}
       .brand span{display:none}
       .nav-links{gap:8px}
+      .nav-links .btn{display:none}
     }
   </style>
 </head>
 <body>
+  <div class="scrim" data-close-menu></div>
+  <aside class="side-menu" id="meny" aria-label="Meny" aria-hidden="true">
+    <button class="close" type="button" data-close-menu aria-label="Lukk meny">×</button>
+    <div class="group">Vert og events</div>
+    <a href="/#tjenester">Tjenester og priser</a>
+    <a href="/#kvelden">Slik jobber jeg</a>
+    <a href="/#om">Om meg</a>
+    <div class="group">Coaching</div>
+    <a href="/kraft/">Kraft – coaching</a>
+    <a href="/kraft/#priser">Priser coaching</a>
+    <a href="/kraft/#om">Hvem jeg er</a>
+    <a class="feature" href="/#kontakt">Book en prat<small>phelix@phelixkraft.no · 977 17 355</small></a>
+  </aside>
   <nav>
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Phelix Kraft">
@@ -181,7 +223,9 @@
         <a href="#tjenester">Tjenester</a>
         <a href="#kvelden">Slik jobber jeg</a>
         <a href="#om">Om</a>
+        <a href="/kraft/">Coaching</a>
         <a class="btn" href="#kontakt">Book en prat</a>
+        <button class="menu-btn" type="button" aria-controls="meny" aria-expanded="false"><span class="bars"></span>Meny</button>
       </div>
     </div>
   </nav>
@@ -240,7 +284,7 @@
           </article>
         </div>
 
-        <p class="note">Trenger du heller en ekstra hjerne på et problem? Jeg tar også sparringsoppdrag. <a href="#kontakt">Spør meg.</a></p>
+        <p class="note">Vil du jobbe med din egen sosiale trygghet? Jeg tilbyr også personlig coaching. <a href="/kraft/">Se Kraft – coaching.</a> Trenger du en ekstra hjerne på et problem, tar jeg også sparringsoppdrag.</p>
       </div>
     </section>
 
@@ -345,5 +389,15 @@
       © 2026 Phelix Kraft ENK · Org.nr. 938 559 422
     </div>
   </footer>
+  <script>
+    (function(){
+      var b=document.body, btn=document.querySelector('.menu-btn'), m=document.getElementById('meny');
+      function set(open){b.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',open);m.setAttribute('aria-hidden',!open);if(open){m.querySelector('a').focus()}}
+      btn.addEventListener('click',function(){set(!b.classList.contains('menu-open'))});
+      document.querySelectorAll('[data-close-menu]').forEach(function(e){e.addEventListener('click',function(){set(false)})});
+      m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+    })();
+  </script>
 </body>
 </html>
